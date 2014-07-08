@@ -263,7 +263,6 @@ def mongodb(request):
     cmd = "sleep 1h"
   return MongoFixture(request, cmd, wait_port=27017, quiet=True)
 
-
 @pytest.fixture(scope="function")
 def redis(request):
   cmd = "redis-server"
