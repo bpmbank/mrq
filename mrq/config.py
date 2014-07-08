@@ -74,7 +74,7 @@ def add_parser_args(parser, config_type):
     parser.add_argument('--queue', action='store', default="default",
                         help='Queue where to put the task when async')
 
-    parser.add_argument('taskpath', action='store',
+    parser.add_argument('--taskpath', action='store',
                         help='Task to run')
 
     parser.add_argument('taskargs', action='store', default='{}', nargs='*',
