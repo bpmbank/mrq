@@ -21,6 +21,7 @@ sys.path.insert(0, os.getcwd())
 from mrq import config, queue, utils
 from mrq.context import set_current_config, set_current_job
 from mrq.utils import load_class_by_path
+from mrq.context import log
 
 
 def main():
@@ -30,7 +31,7 @@ def main():
   cfg = config.get_config(parser=parser, config_type="run")
   cfg["is_cli"] = True
   set_current_config(cfg)
-
+  log.info(cfg)
   if len(cfg["taskargs"]) == 1:
     params = json.loads(cfg["taskargs"][0])
   else:

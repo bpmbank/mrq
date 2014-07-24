@@ -10,7 +10,6 @@ define([
     RootView
   ) {
 
-
   var app = {
 
     root:"/",
@@ -141,8 +140,6 @@ define([
   //Mixin event support
   _.extend(app, Backbone.Events);
 
-
   return app;
-
 
 });

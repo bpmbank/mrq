@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
+# from distutils.core import setup
+# from setuptools import find_packages
 import os
 from pip.req import parse_requirements
-
 
 def get_requirements():
     reqs = []
@@ -23,8 +24,9 @@ def get_version():
 setup(
     name="mrq",
     include_package_data=True,
-    packages=find_packages(exclude=['tests']),
-    version=get_version(),
+   # packages=find_packages(exclude=['tests']),
+    packages=['mrq',],
+   version=get_version(),
     description="Mongo Redis Queue",
     author="Pricing Assistant",
     license='MIT',

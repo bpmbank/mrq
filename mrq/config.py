@@ -58,6 +58,9 @@ def add_parser_args(parser, config_type):
   parser.add_argument('--worker_class', default="mrq.worker.Worker", action="store",
                       help='Path to a custom worker class')
 
+  parser.add_argument('--timeout',default=400,action='store',
+                      help='timeout for the job')
+
   parser.add_argument('--version', '-v', default=False, action="store_true",
                       help='Prints current MRQ version')
 
