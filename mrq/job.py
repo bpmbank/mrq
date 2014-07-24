@@ -221,14 +221,14 @@ class Job(object):
             else:
                 yield json.loads(df.to_json(orient='records'))
         if result is not None:
-            updates["result"] = True
+            updates["result"] = result
             #store the result in the mongodb
-            mrq_data=connections.mongodb_second
+            #mrq_data=connections.mongodb_second
 
-            for k,v in result.iteritems():
-                collection=getattr(mrq_data,k)
-                for records in df_chunks(v,1000):
-                    collection.insert(records)
+            #for k,v in result.iteritems():
+            #    collection=getattr(mrq_data,k)
+            #    for records in df_chunks(v,1000):
+            #        collection.insert(records)
 
 
 
